@@ -32,12 +32,12 @@ namespace SolrWindowsService
             var workingDirectory = ht.GetValueOrDefault(WORKINGDIRECTORY, "");
             return new SolrServiceConfig
                 {
-                    JavaExecutable = ht.GetValueOrDefault(JAVAEXEC,@"C:\Program Files (x86)\Java\jre6\bin\java.exe"),
+                    JavaExecutable = ht.GetValueOrDefault(JAVAEXEC, @"C:\Program Files (x86)\Java\jre6\bin\java.exe"),
                     WorkingDirectory = workingDirectory,
                     JarFilePath = GetJarFilePath(workingDirectory),
-                    SolrHome = ht.GetValueOrDefault(SOLRHOME,"solr"),
-                    CommandLineArgs = ht.GetValueOrDefault(ARGS,""),
-                    Port = ht.GetValueOrDefault(PORT,8389),
+                    SolrHome = ht.GetValueOrDefault(SOLRHOME, "solr"),
+                    CommandLineArgs = ht.GetValueOrDefault(ARGS, ""),
+                    Port = ht.GetValueOrDefault(PORT, 8389),
                     InstanceName = ht.GetValueOrDefault(INSTANCENAME, ""),
                     ShowConsole = ht.GetValueOrDefault(SHOWCONSOLE, false)
                 };
@@ -68,6 +68,6 @@ namespace SolrWindowsService
         }
     }
 
-    
+
 
 }

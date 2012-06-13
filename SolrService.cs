@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Configuration;
 using System.Diagnostics;
-using System.ServiceProcess;
-using Guardian.Configuration;
-using System.IO;
 
 namespace SolrWindowsService
 {
@@ -13,7 +9,7 @@ namespace SolrWindowsService
 
         public void Start()
         {
-            Log("service starting");
+            Log("starting service");
             try
             {
                 var config = SolrServiceConfigurationManager.GetSolrServiceConfiguration();
@@ -34,6 +30,13 @@ namespace SolrWindowsService
             
         }
 
+        public void Stop()
+        {
+            Log("stopping service");
+            process.Kill();
+            process.Dispose();
+        }
+
         protected void Log(string message)
         {
             const string source = "SolrService";
@@ -43,13 +46,6 @@ namespace SolrWindowsService
                 EventLog.CreateEventSource(source, log);
             
             EventLog.WriteEntry(source, message);
-        }
-
-        public void Stop()
-        {
-            //Log("stopping service");
-            process.Kill();
-            process.Dispose();
         }
     }
 }
