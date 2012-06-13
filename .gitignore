@@ -46,6 +46,10 @@ _UpgradeReport_Files/
 /packages/*.*
 !/.nuget/*.*
 
+# TFS #
+#######
+*.vspscc
+
 # Logs and databases #
 ######################
 *.log
