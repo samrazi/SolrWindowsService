@@ -6,6 +6,8 @@ compiled source #
 *.exe
 *.pdb
 *.dll.config
+*.suo
+*.user
 
 # Directories #
 ###############

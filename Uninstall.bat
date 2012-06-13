@@ -1,0 +1,2 @@
+SolrWindowsService.exe uninstall
+pause
