@@ -16,7 +16,7 @@ compiled source #
 /TestResults
 
 #include dlls in the binaries folder
-!/Binaries/*/*.dll
+/Binaries/*/*.dll
 
 # Resharper #
 #############
