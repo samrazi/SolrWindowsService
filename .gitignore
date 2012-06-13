@@ -41,6 +41,11 @@ _UpgradeReport_Files/
 *.tar
 *.zip
 
+# Nuget #
+#########
+/packages/*.*
+!/.nuget/*.*
+
 # Logs and databases #
 ######################
 *.log
