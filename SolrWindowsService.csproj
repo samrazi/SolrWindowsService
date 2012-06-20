@@ -78,7 +78,6 @@
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml" />
     <Reference Include="Topshelf, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\Topshelf.2.3.0.0\lib\NET40\Topshelf.dll</HintPath>
     </Reference>
   </ItemGroup>
