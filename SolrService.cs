@@ -5,20 +5,20 @@ namespace SolrWindowsService
 {
     internal class SolrService
     {
-        static readonly Process process = new Process();
+        static readonly Process Process = new Process();
 
-        public void Start()
+        public static void Start()
         {
             Log("starting service");
             try
             {
                 var config = SolrServiceConfigurationManager.GetSolrServiceConfiguration();
-                process.StartInfo.FileName = config.JavaExecutable;
-                process.StartInfo.WorkingDirectory = config.WorkingDirectory;
-                process.StartInfo.Arguments = config.GetprocessStartArguments();
-                process.StartInfo.UseShellExecute = config.ShowConsole;
-                Log(process.ToString());
-                var result = process.Start();
+                Process.StartInfo.FileName = config.JavaExecutable;
+                Process.StartInfo.WorkingDirectory = config.WorkingDirectory;
+                Process.StartInfo.Arguments = config.GetprocessStartArguments();
+                Process.StartInfo.UseShellExecute = config.ShowConsole;
+                Log(Process.ToString());
+                var result = Process.Start();
                 Log("result of batch start: " + result);
                 //process.WaitForExit();
             }
@@ -30,14 +30,14 @@ namespace SolrWindowsService
             
         }
 
-        public void Stop()
+        public static void Stop()
         {
             Log("stopping service");
-            process.Kill();
-            process.Dispose();
+            Process.Kill();
+            Process.Dispose();
         }
 
-        protected void Log(string message)
+        private static void Log(string message)
         {
             const string source = "SolrService";
             const string log = "Application";

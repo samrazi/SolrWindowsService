@@ -32,7 +32,7 @@ namespace SolrWindowsService
             var workingDirectory = ht.GetValueOrDefault(WORKINGDIRECTORY, "");
             return new SolrServiceConfig
                 {
-                    JavaExecutable = ht.GetValueOrDefault(JAVAEXEC, @"C:\Program Files (x86)\Java\jre6\bin\java.exe"),
+                    JavaExecutable = ht.GetValueOrDefault(JAVAEXEC, @"C:\Program Files\Java\jre7\bin\java.exe"),
                     WorkingDirectory = workingDirectory,
                     JarFilePath = GetJarFilePath(workingDirectory),
                     SolrHome = ht.GetValueOrDefault(SOLRHOME, "solr"),

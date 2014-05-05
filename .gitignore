@@ -30,7 +30,7 @@ _UpgradeReport_Files/
 
 # Packages #
 ############
-# itÎéÎ÷s better to unpack these files and commit the raw source
+# itï¿½ï¿½ï¿½ï¿½s better to unpack these files and commit the raw source
 # git has its own built in compression methods
 *.7z
 *.dmg
@@ -61,3 +61,4 @@ _UpgradeReport_Files/
 ehthumbs.db
 Icon?
 Thumbs.db
+SolrWindowsService.sln.GhostDoc.xml
